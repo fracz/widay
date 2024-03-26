@@ -1,0 +1,70 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+.mb-3 {
+  margin-bottom: 1em;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+button {
+  background: #006bad;
+  color: white;
+  border: 0;
+  padding: .5em 1em;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+.error {
+  color: darkred;
+}
+
+.taskcode {
+  font-size: 1.5em;
+  text-align: center;
+}
