@@ -55,7 +55,13 @@ export default {
 <template>
   <div>
     <div v-if="done">
-      Yay!
+      <h2 style="text-align: center" class="mb-3">Brawo! Zadanie rozwiązane!</h2>
+      <div style="text-align: center">
+        <img v-if="task === 'ascii'" src="@/assets/wlepka-ascii.svg" alt="" style="max-width: 200px">
+        <img v-if="task === 'morse'" src="@/assets/wlepka-morse.svg" alt="" style="max-width: 200px">
+        <img v-if="task === 'rot'" src="@/assets/wlepka-rot.svg" alt="" style="max-width: 200px">
+        <img v-if="task === 'vanity'" src="@/assets/wlepka-vanity.svg" alt="" style="max-width: 200px">
+      </div>
     </div>
     <div v-else-if="unlocked">
       <h2>Twoje zadanie</h2>
