@@ -3,7 +3,7 @@
     <div class="info" v-if="left > 0">
       Pozostało zadań: {{ left }}
     </div>
-    <div class="success">
+    <div class="success" v-else>
       <strong>Brawo!</strong> Udało Ci się rozwiązać wszystkie zadania! Zgłoś się do stoiska przy wejściu po upominek.
     </div>
   </div>
