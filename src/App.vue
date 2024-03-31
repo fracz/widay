@@ -6,6 +6,8 @@ import IconRot from "@/components/icons/IconRot.vue";
 import IconMorse from "@/components/icons/IconMorse.vue";
 import IconCommunity from "@/components/icons/IconSegment.vue";
 import IconSegment from "@/components/icons/IconSegment.vue";
+import TaskLink from "@/components/tasks/TaskLink.vue";
+import TaskStatus from "@/components/tasks/TaskStatus.vue";
 </script>
 
 <template>
@@ -26,37 +28,60 @@ import IconSegment from "@/components/icons/IconSegment.vue";
       </p>
 
       <nav class="tasks" style="display: flex; justify-content: center">
-        <RouterLink to="/task-vanity">
-          <IconVanity/>
-        </RouterLink>
-        <RouterLink to="/task-ascii">
-          <IconAscii/>
-        </RouterLink>
-        <RouterLink to="/task-rot">
-          <IconRot/>
-        </RouterLink>
-        <RouterLink to="/task-morse">
-          <IconMorse/>
-        </RouterLink>
-        <RouterLink to="/task-segment">
-          <IconSegment/>
-        </RouterLink>
+        <TaskLink task="ascii">
+          <template #icon>
+            <IconAscii/>
+          </template>
+        </TaskLink>
+        <TaskLink task="vanity">
+          <template #icon>
+            <IconVanity/>
+          </template>
+        </TaskLink>
+        <TaskLink task="rot">
+          <template #icon>
+            <IconRot/>
+          </template>
+        </TaskLink>
+        <TaskLink task="morse">
+          <template #icon>
+            <IconMorse/>
+          </template>
+        </TaskLink>
+        <TaskLink task="steganography">
+          <template #icon>
+            <IconSegment/>
+          </template>
+        </TaskLink>
+
+<!--        <RouterLink to="/task-vanity">-->
+<!--        </RouterLink>-->
+<!--        <RouterLink to="/task-ascii">-->
+<!--          <IconAscii/>-->
+<!--        </RouterLink>-->
+<!--        <RouterLink to="/task-rot">-->
+<!--          <IconRot/>-->
+<!--        </RouterLink>-->
+<!--        <RouterLink to="/task-morse">-->
+<!--          <IconMorse/>-->
+<!--        </RouterLink>-->
+<!--        <RouterLink to="/task-steganography">-->
+<!--          <IconSegment/>-->
+<!--          v-->
+<!--        </RouterLink>-->
       </nav>
+      <TaskStatus/>
     </div>
   </header>
 
-  <RouterView/>
+  <router-view v-slot="{ Component }" style="padding: 1em 0">
+    <transition name="fade" mode="out-in">
+      <component :is="Component"/>
+    </transition>
+  </router-view>
 </template>
 
 <style scoped>
-.tasks a {
-}
-
-.tasks a svg {
-  width: 40px;
-  height: 40px;
-}
-
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -83,23 +108,6 @@ nav {
   margin-top: 2rem;
 }
 
-nav a.router-link-active {
-  background-color: var(--color-link-active);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: var(--color-link-active);
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
 
 @media (min-width: 1024px) {
   header {
@@ -124,5 +132,15 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

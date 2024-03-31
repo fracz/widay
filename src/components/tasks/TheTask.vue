@@ -1,4 +1,6 @@
 <script>
+import eventbus from "@/eventbus.js";
+
 export default {
   props: ['task', 'code', 'answer'],
   data() {
@@ -11,7 +13,7 @@ export default {
     }
   },
   mounted() {
-    this.enteredCode = localStorage.getItem('taskCode' + this.task) || '';
+    this.enteredCode = localStorage.getItem('taskCode' + this.task) || this.$route.params.code || '';
     this.enteredAnswer = localStorage.getItem('taskDone' + this.task) || '';
     if (this.enteredCode) {
       this.unlockTask();
@@ -22,6 +24,7 @@ export default {
       this.tried = true;
       if (!this.displayError) {
         localStorage.setItem('taskCode' + this.task, this.enteredCode);
+        eventbus.$emit('taskFound');
         this.unlocked = true;
         this.tried = false;
         if (this.enteredAnswer) {
@@ -33,6 +36,7 @@ export default {
       this.tried = true;
       if (!this.displayError) {
         localStorage.setItem('taskDone' + this.task, this.enteredAnswer);
+        eventbus.$emit('taskDone');
         this.done = true;
       }
     }
@@ -61,6 +65,7 @@ export default {
         <img v-if="task === 'morse'" src="@/assets/wlepka-morse.svg" alt="" style="max-width: 200px">
         <img v-if="task === 'rot'" src="@/assets/wlepka-rot.svg" alt="" style="max-width: 200px">
         <img v-if="task === 'vanity'" src="@/assets/wlepka-vanity.svg" alt="" style="max-width: 200px">
+        <img v-if="task === 'steganography'" src="@/assets/wlepka-steganography.svg" alt="" style="max-width: 200px">
       </div>
     </div>
     <div v-else-if="unlocked">
