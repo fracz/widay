@@ -47,9 +47,9 @@ export default {
         return false;
       }
       if (this.unlocked) {
-        return this.enteredAnswer.toLowerCase() != this.answer;
+        return this.enteredAnswer.trim().toLowerCase() != this.answer;
       } else {
-        return this.enteredCode.toLowerCase() != this.code;
+        return this.enteredCode.trim().toLowerCase() != this.code;
       }
     }
   }
