@@ -14,7 +14,7 @@ import TaskStatus from "@/components/tasks/TaskStatus.vue";
   <header>
     <div style="display: flex; flex-direction: column; align-items: center">
       <RouterLink to="/" class="logo">
-        <img alt="Vue logo" src="@/assets/ki-new-logo.svg"/>
+        <img alt="Vue logo" src="@/assets/ki-new-logo.svg" style="max-width: 100%"/>
       </RouterLink>
 
 
