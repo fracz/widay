@@ -5,7 +5,7 @@ import TheTask from "@/components/tasks/TheTask.vue";
 
 <template>
   <div>
-    <h1>Steganografia</h1>
+    <h1 id="taskTitle">Steganografia</h1>
     <p class="mb-3">
       Steganografia jest nauką lub praktyką, z która prawdopodobnie spotykamy się na co dzień, zupełnie o tym nie
       wiedząc. Polega ona na ukrywaniu wiadomości, zdjęcia lub pliku w nośniku. Nośnikiem może być zdjęcie lub inna

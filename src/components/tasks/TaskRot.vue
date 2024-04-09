@@ -5,7 +5,7 @@ import TheTask from "@/components/tasks/TheTask.vue";
 
 <template>
   <div>
-    <h1>ROT-13</h1>
+    <h1 id="taskTitle">ROT-13</h1>
     <p class="mb-3">
       Prosty szyfr przesuwający, którego działanie polega na zamianie każdego znaku alfabetu łacińskiego na znak
       występujący 13 pozycji po nim, przy czym wielkość liter nie ma przy przekształcaniu znaczenia. ROT13 jest

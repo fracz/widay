@@ -5,7 +5,7 @@ import TheTask from "@/components/tasks/TheTask.vue";
 
 <template>
   <div>
-    <h1>Vanity Code</h1>
+    <h1 id="taskTitle">Vanity Code</h1>
     <p class="mb-3">
       Cyfry w kodzie <i>Vanity</i> odpowiadają literom na klawiaturze numerycznej telefonu. Cyfry 1 i 0 nie odpowiadają
       żadnej literze i często będą używane jako spacje. Liczby 2, 3, 4, 5, 6 i 8 są połączone z trzema literami, a 7 i 9

@@ -5,7 +5,7 @@ import TheTask from "@/components/tasks/TheTask.vue";
 
 <template>
   <div>
-    <h1>Kod Morse’a</h1>
+    <h1 id="taskTitle">Kod Morse’a</h1>
     <p class="mb-3">
       Jest to sposób reprezentacji alfabetu, cyfr i znaków specjalnych za pomocą dźwięków, błysków światła, impulsów
       elektrycznych lub znaków popularnie zwanych kreską i kropką. Wszystkie znaki reprezentowane są przez

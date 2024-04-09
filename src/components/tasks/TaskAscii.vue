@@ -5,7 +5,7 @@ import TheTask from "@/components/tasks/TheTask.vue";
 
 <template>
   <div>
-    <h1>ASCII</h1>
+    <h1 id="taskTitle">ASCII</h1>
     <p class="mb-3">
       Siedmiobitowy system kodowania znaków, używany we współczesnych komputerach oraz sieciach komputerowych, a także
       innych urządzeniach wyposażonych w mikroprocesor. Przyporządkowuje liczbom z zakresu 0−127: litery alfabetu
