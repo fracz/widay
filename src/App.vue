@@ -23,8 +23,7 @@ import TaskStatus from "@/components/tasks/TaskStatus.vue";
 
       <h3 style="margin-bottom: 10px">Żądny przygód?</h3>
       <p style="text-align: center">
-        Znajdź pięć kodów QR na terenie atrium budynku Informatyki (D-17), odszyfruj wiadomości i zgłoś się po upominek
-        przy wejściu!
+        Zostań odkrywcą na tropie informatyki i kryptografii, grając w grę terenową na Wydziale Informatyki!
       </p>
 
       <nav class="tasks" style="display: flex; justify-content: center">

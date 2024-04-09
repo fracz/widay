@@ -18,7 +18,7 @@ export default {
     if (this.enteredCode) {
       this.unlockTask();
     }
-    setTimeout(() => document.getElementById('taskTitle')?.scrollIntoView({behavior: 'smooth'}));
+    setTimeout(() => document.getElementById('taskTitle')?.scrollIntoView({behavior: 'smooth'}), 50);
   },
   methods: {
     unlockTask() {
